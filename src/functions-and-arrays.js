@@ -10,14 +10,10 @@ function maxOfTwoNumbers(num1,num2) {
 const words = ["mystery", "brother", "aviator", "crocodile", "pearl", "orchard", "crackpot"];
 
 function findLongestWord(arrayOfWords) {
-    if (arrayOfWords.length === 0) return 0
-    let longestWord = ''
-    for (const word of arrayOfWords) {
-        if (word.length > longestWord.length) longestWord = word
-    }
-    return longestWord
+    return arrayOfWords.reduce((a,b) => a.length >= b.length ? a : b, '') || 0
 }
 
+findLongestWord([])
 
 
 
@@ -42,8 +38,5 @@ function averageNumbers(arrayOfNumbers) {
 const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", "truth", "disobedience"];
 
 function doesWordExist(arrayOfWords, searchString) {
-    if (arrayOfWords.length === 0) return null
-    return arrayOfWords.some((word) => word === searchString)
+    return !arrayOfWords.length ? null : arrayOfWords.some((word) => word === searchString)
 }
-
-doesWordExist(words2,'subdset')
