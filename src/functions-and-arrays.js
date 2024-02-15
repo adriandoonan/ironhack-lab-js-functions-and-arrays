@@ -13,7 +13,6 @@ function findLongestWord(arrayOfWords) {
     return arrayOfWords.reduce((a,b) => a.length >= b.length ? a : b, '') || 0
 }
 
-findLongestWord([])
 
 
 
