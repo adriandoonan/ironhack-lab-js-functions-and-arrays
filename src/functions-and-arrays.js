@@ -33,10 +33,8 @@ function sumNumbers(arrayOfNumbers) {
 const numbers2 = [2, 6, 9, 10, 7, 4, 1, 9];
 
 function averageNumbers(arrayOfNumbers) {
-    if (arrayOfNumbers.length === 0) return 0
-    return sumNumbers(arrayOfNumbers) / arrayOfNumbers.length
+    return sumNumbers(arrayOfNumbers) / arrayOfNumbers.length || 0
 }
-
 
 
 
