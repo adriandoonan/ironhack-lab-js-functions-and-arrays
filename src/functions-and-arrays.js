@@ -13,7 +13,7 @@ function findLongestWord(arrayOfWords) {
     if (arrayOfWords.length === 0) return 0
     let longestWord = ''
     for (const word of arrayOfWords) {
-        if (word.length > longestWord.length) {longestWord = word}
+        if (word.length > longestWord.length) longestWord = word
     }
     return longestWord
 }
@@ -27,8 +27,6 @@ const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 function sumNumbers(arrayOfNumbers) {
     return arrayOfNumbers.reduce((a,b) => a + b, 0)
 }
-
-
 
 
 // Iteration 4 | Numbers Average
@@ -47,5 +45,7 @@ const words2 = ["machine", "subset", "trouble", "starting", "matter", "eating", 
 
 function doesWordExist(arrayOfWords, searchString) {
     if (arrayOfWords.length === 0) return null
-    return arrayOfWords.includes(searchString)
+    return arrayOfWords.some((word) => word === searchString)
 }
+
+doesWordExist(words2,'subdset')
